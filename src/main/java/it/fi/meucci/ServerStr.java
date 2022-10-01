@@ -35,8 +35,19 @@ public void comunica()
     try
     {
         System.out.println("");
-        stringRicevuta =inDalClient.readLine(); 
-        System.out.println(""); 
-      }
+        stringRicevuta = inDalClient.readLine();
+        System.out.println(""+stringRicevuta);
+
+        //modifico e riinvio
+        stringModifica=stringRicevuta.toUpperCase();
+        System.out.println("stringa modificata");
+        outVersoClient.writeBytes(stringModifica+'\n');
+
+        //chiudo connessione dei client
+        System.out.println("chiudo connessione");
+        client.close();
+
+     }
+    
 }
 }
