@@ -18,6 +18,7 @@ public class ServerStr {
             System.out.print("server in esecuzione");
             server = new ServerSocket(6789);
             client = server.accept();
+            //chiudo il server
             server.close();
 
             inDalClient = new BufferedReader(new InputStreamReader(client.getInputStream()));
