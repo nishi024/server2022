@@ -16,7 +16,9 @@ public class ServerStr {
     public Socket attendi() {
         try {
             System.out.print("server in esecuzione");
+            //creo un server sulla porta (6789)
             server = new ServerSocket(6789);
+            //in attesa di un client
             client = server.accept();
             //chiudo il server
             server.close();
